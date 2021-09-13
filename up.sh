@@ -14,9 +14,11 @@ git config --global user.name "$user"
 git init 
 git add *
 git commit -m "master"
+sleep 5
 clear
 read -p "Masukan Link Github Mu: " link
 git remote add origin $link
-git push -u origin master
+read -p "masukan nama branch nya: " branch
+git push -u origin $branch
 ;;
 esac
