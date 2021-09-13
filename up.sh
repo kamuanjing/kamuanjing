@@ -1,8 +1,12 @@
 #!/bin/bash
 clear 
-echo -e "1. setup global user.name dan email"
-echo -e "2. upload"
-read -p "Masukan Nomor" gass
+echo -e "-----------------------------------"
+echo -e " SCRIPT AUTO UPLOAD FILE TO GITHUB "
+echo -e "       Telegram t.me/zxbxns        "
+echo -e "-----------------------------------"
+echo -e "[1] setup global user.name dan email"
+echo -e "[2] upload"
+read -p "Masukan Nomor: " gass
 case $gass in
 1)
 read -p "Masukan Email Akun Github Nya: " email
@@ -12,14 +16,14 @@ git config --global user.name "$user"
 ;;
 2)
 git init 
-git add *
-read -p "Masukan Nama Branch: " branch1
-git commit -m "$branch1"
+read -p "Masukan Nama File: " file
+git add $file
+read -p "Masukan Nama Branch: " branch
+git commit -m "$branch"
 sleep 5
 clear
 read -p "Masukan Link Github Mu: " link
-git remote add $link
-read -p "Masukan Nama Branch: " branch2
-git push -u origin $branch2
+git remote add origin $link
+git push -u origin $branch
 ;;
 esac
