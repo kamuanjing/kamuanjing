@@ -18,7 +18,7 @@ git commit -m "$branch1"
 sleep 5
 clear
 read -p "Masukan Link Github Mu: " link
-git remote add origin $link
+git remote add $link
 read -p "Masukan Nama Branch: " branch2
 git push -u origin $branch2
 ;;
