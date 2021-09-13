@@ -14,7 +14,7 @@ git config --global user.name "$user"
 git init 
 git add *
 git commit -m "master"
-
+clear
 read -p "Masukan Link Github Mu: " link
 git remote add origin $link
 git push -u origin master
