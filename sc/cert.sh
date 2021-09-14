@@ -16,7 +16,11 @@ clear
 echo start
 sleep 0.5
 source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then 
+domain=$(cat /etc/v2ray/domain)
+else
 domain=$IP
+fi
 systemctl stop v2ray
 systemctl stop v2ray@none
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
