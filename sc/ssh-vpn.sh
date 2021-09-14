@@ -108,7 +108,7 @@ wget -O /etc/nginx/conf.d/vps.conf "http://script.zxbxns.me/sc/vps.conf"
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "http://sc.zxbxns.me:81/sc/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "http://script.zxbxns.me/sc/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -254,7 +254,7 @@ netfilter-persistent reload
 cd /usr/bin
 wget -O add-host "http://script.zxbxns.me/sc/add-host.sh"
 wget -O about "http://script.zxbxns.me/sc/about.sh"
-wget -O menu "http://script.zxbxns.me:/sc/menu.sh"
+wget -O menu "http://script.zxbxns.me/sc/menu.sh"
 wget -O usernew "http://script.zxbxns.me/sc/usernew.sh"
 wget -O trial "http://script.zxbxns.me/sc/trial.sh"
 wget -O hapus "http://script.zxbxns.me/sc/hapus.sh"
