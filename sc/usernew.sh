@@ -23,10 +23,11 @@ read -p "Username : " Login
 read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
 
-ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
-sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
-ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)" 
+sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)" 
+ssh-ws="$(cat ~/log-install.txt | grep -w "SSH-WS" | cut -d: -f2)" 
+ssl-ws="$(cat ~/log-install.txt | grep -w "SSL-WS" | cut -d: -f2)"
+ovpn-ws="$(cat ~/log-install.txt | grep -w "OVPN-WS" | cut -d: -f2)"
 sleep 1
 echo Ping Host
 echo Cek Hak Akses...
@@ -55,9 +56,9 @@ echo -e "━━━━━━━━━━━━━━━━━━━━━━━�
 echo -e "OpenSSH        : 22"
 echo -e "Dropbear       : 109, 143"
 echo -e "SSL/TLS        :$ssl"
-echo -e "SSH-WS         : 2082"
-echo -e "SSL-WS         : 443"
-echo -e "OVPN-WS        : 2052"
+echo -e "SSH-WS         :$ssh-ws"
+echo -e "SSL-WS         :$ssl-ws"
+echo -e "OVPN-WS        :$ovpn-ws"
 echo -e "Port Squid     :$sqd"
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "Link OpenVPN   : http://$domain:81"
