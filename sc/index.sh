@@ -37,3 +37,6 @@ cat> /home/vps/public_html/index.html << END
 	</script> </body>
 </html>
 END
+
+# hapus script
+rm -f /root/index.sh

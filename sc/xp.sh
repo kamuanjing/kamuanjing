@@ -101,7 +101,7 @@ do
 exp=$(grep -w "^### $user" "/etc/trojan-go/akun.conf" | cut -d ' ' -f 3)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "now" +%s)
-exp2=$(( (d1-d2) / 86400))
+exp2=$(( (d1 a- d2) / 86400))
 if [[ "$exp2" = "0" ]]; then
 sed -i "/^### $user $exp/d" "/etc/trojan-go/akun.conf"
 sed -i '/^,"'"$user"'"$/d' /etc/trojan-go/config.json

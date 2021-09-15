@@ -109,4 +109,4 @@ chmod +x del-trgo
 chmod +x renew-trgo
 
 # hapus script
-rm -f trojan-go.sh
+rm -f /root/trojan-go.sh
