@@ -316,8 +316,11 @@ chmod +x xp
 chmod +x profile
 chmod +x update
 chmod +x status
-echo "0 0 * * * root /usr/bin/xp && delete" >> /etc/crontab
-echo "0 5 * * * root /usr/bin/clear-log && reboot" >> /etc/crontab
+
+# seting crontab
+echo "0 0 * * * root /usr/bin/xp && delete && clear-log" >> /etc/crontab
+echo "0 5 * * * root reboot" >> /etc/crontab
+
 # remove unnecessary files
 cd
 apt autoclean -y
