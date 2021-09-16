@@ -33,8 +33,10 @@ wget http://script.zxbxns.me/sc/ssh-ws.sh && chmod +x ssh-ws.sh && ./ssh-ws.sh
 # install ovpn-ws
 wget http://script.zxbxns.me/sc/ovpn-ws.sh && chmod +x ovpn-ws.sh && ./ovpn-ws.sh
 
-# install ssl-ws
-wget http://script.zxbxns.me/sc/ssl-ws.sh && chmod +x ssl-ws.sh && ./ssl-ws.sh
+# install ssl-ws & sslh
+apt-get install sslh -y 
+wget -O /etc/default/sslh "script.zxbxns.me/sc/sslh.conf"
+service sslh restart
 
 # Edit file /etc/systemd/system/rc-local.service
 cat > /etc/systemd/system/rc-local.service <<-END
@@ -180,8 +182,8 @@ accept = 442
 connect = 127.0.0.1:1194
 
 [websocket]
-accept = 443
-connect = 127.0.0.1:111
+accept = 775
+connect = 127.0.0.1:443
 
 END
 
