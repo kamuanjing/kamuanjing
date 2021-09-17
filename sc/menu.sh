@@ -6,6 +6,16 @@ h='\e[0;32m'
 n='\E[0m'
 b="\e[0;34m"
 v="$(cat /home/ver)"
+MYIP=$(wget -qO- ifconfig.me/ip); 
+echo "Checking VPS" 
+IZIN=$( curl http://sc.zxbxns.me:81/akses/token | grep $MYIP ) 
+if 
+[ $MYIP = $IZIN ]; then 
+echo -e "${h}Permission Accepted...${n}" 
+else echo -e "${m}Permission Denied!${n}"; 
+echo "Only For Premium Users" 
+exit 0
+fi
 clear
 echo -e "$b━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "$w========================$p[-SSH & OpenVPN-]$m========================$n"
