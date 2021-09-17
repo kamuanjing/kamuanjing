@@ -112,8 +112,8 @@ echo -e "$m[xx] $h Exit From VPS $m[exit]"
 echo -e "      $b━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "$w=============================$p[ $v ]$m=============================$n"
 echo -e "$b━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$h"
-read -p "•] Select From Options [1-65 or xx] : " menu
-echo -e "\e[1;0m"
+read -p "[••]  Select From Options [1-65 or xx] : " menu
+echo -e "$n"
 case $menu in
 1)
 usernew
@@ -311,7 +311,7 @@ info
 about
 ;;
 xx)
-exit
+exit 0
 ;;
 *)
 clear
