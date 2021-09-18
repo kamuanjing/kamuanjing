@@ -150,15 +150,15 @@ if [ "${status_text}" == "active" ]
 then                                                                                    
 echo -e " Shadowsocks        : Shadowsocks Service Is "$green"Running"$NC""                
 else                                                                                    
-echo -e " Shadowsocks        : Sadhowsocks Service Is "$red"Not Running (Error)"$NC""      
+echo -e " Shadowsocks        : Shadowsocks Service Is "$red"Not Running (Error)"$NC""      
 fi
 status="$(systemctl show ssrmu --no-page)"                                      
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)                     
 if [ "${status_text}" == "active" ]                                                     
 then                                                                                    
-echo -e " ShadowsocksR       : SSR Service Is "$green"Running"$NC""                
+echo -e " ShadowsocksR       : ShadowsocksR Service Is "$green"Running"$NC""                
 else                                                                                    
-echo -e " ShadowsocksR       : SSR Service Is "$red"Not Running (Error)"$NC""      
+echo -e " ShadowsocksR       : ShadowsocksR Service Is "$red"Not Running (Error)"$NC""      
 fi
 status="$(systemctl show accel-ppp.service --no-page)"                                      
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)                     
