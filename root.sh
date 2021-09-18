@@ -12,7 +12,7 @@ read -p "Please Input an New Password For Root : " Pass
 
 # Starting Changes To Root
 rm -f /etc/ssh/sshd_config
-wget -O /etc/ssh/sshd_config http://script.zxbxns.me/sc/sshd
+wget -O /etc/ssh/sshd_config http://script.zxbxns.my.id/sc/sshd
 echo -e "$Pass\n$Pass\n"|passwd root &> /dev/null
 IPANDA=$(wget -qO- ifconfig.co);
 

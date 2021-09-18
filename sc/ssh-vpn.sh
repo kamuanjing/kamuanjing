@@ -15,27 +15,27 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.zxbxns.me
-organizationalunit=www.zxbxns.me
-commonname=www.zxbxns.me
-email=admin@zxbxns.me
+organization=www.zxbxns.my.id
+organizationalunit=www.zxbxns.my.id
+commonname=www.zxbxns.my.id
+email=admin@zxbxns.my.id
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "http://script.zxbxns.me/sc/password"
+wget -O /etc/pam.d/common-password "http://script.zxbxns.my.id/sc/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
 cd
 
 # install ssh-ws
-wget http://script.zxbxns.me/sc/ssh-ws.sh && chmod +x ssh-ws.sh && ./ssh-ws.sh 
+wget http://script.zxbxns.my.id/sc/ssh-ws.sh && chmod +x ssh-ws.sh && ./ssh-ws.sh 
 
 # install ovpn-ws
-wget http://script.zxbxns.me/sc/ovpn-ws.sh && chmod +x ovpn-ws.sh && ./ovpn-ws.sh
+wget http://script.zxbxns.my.id/sc/ovpn-ws.sh && chmod +x ovpn-ws.sh && ./ovpn-ws.sh
 
 # install ssl-ws & sslh
 apt-get install sslh -y 
-wget -O /etc/default/sslh "script.zxbxns.me/sc/sslh.conf"
+wget -O /etc/default/sslh "script.zxbxns.my.id/sc/sslh.conf"
 service sslh restart
 
 # Edit file /etc/systemd/system/rc-local.service
@@ -102,15 +102,15 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "http://script.zxbxns.me/sc/nginx.conf"
+wget -O /etc/nginx/nginx.conf "http://script.zxbxns.my.id/sc/nginx.conf"
 mkdir -p /home/vps/public_html
-wget script.zxbxns.me/sc/index.sh && chmod +x index.sh && ./index.sh
-wget -O /etc/nginx/conf.d/vps.conf "http://script.zxbxns.me/sc/vps.conf"
+wget script.zxbxns.my.id/sc/index.sh && chmod +x index.sh && ./index.sh
+wget -O /etc/nginx/conf.d/vps.conf "http://script.zxbxns.my.id/sc/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "http://script.zxbxns.me/sc/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "http://script.zxbxns.my.id/sc/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -140,7 +140,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "http://script.zxbxns.me/sc/squid3.conf"
+wget -O /etc/squid/squid.conf "http://script.zxbxns.my.id/sc/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -198,7 +198,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget http://script.zxbxns.me/sc/vpn.sh && chmod +x vpn.sh && ./vpn.sh
+wget http://script.zxbxns.my.id/sc/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -231,7 +231,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "http://script.zxbxns.me/sc/banner.conf"
+wget -O /etc/issue.net "http://script.zxbxns.my.id/sc/banner.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -254,38 +254,38 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "http://script.zxbxns.me/sc/add-host.sh"
-wget -O about "http://script.zxbxns.me/sc/about.sh"
-wget -O menu "http://script.zxbxns.me/sc/menu.sh"
-wget -O usernew "http://script.zxbxns.me/sc/usernew.sh"
-wget -O trial "http://script.zxbxns.me/sc/trial.sh"
-wget -O hapus "http://script.zxbxns.me/sc/hapus.sh"
-wget -O member "http://script.zxbxns.me/sc/member.sh"
-wget -O delete "http://script.zxbxns.me/sc/delete.sh"
-wget -O cek "http://script.zxbxns.me/sc/cek.sh"
-wget -O restart "http://script.zxbxns.me/sc/restart.sh"
-wget -O speedtest "http://script.zxbxns.me/sc/speedtest_cli.py"
-wget -O info "http://script.zxbxns.me/sc/info.sh"
-wget -O ram "http://script.zxbxns.me/sc/ram.sh"
-wget -O renew "http://script.zxbxns.me/sc/renew.sh"
-wget -O autokill "http://script.zxbxns.me/sc/autokill.sh"
-wget -O ceklim "http://script.zxbxns.me/sc/ceklim.sh"
-wget -O tendang "http://script.zxbxns.me/sc/tendang.sh"
-wget -O clear-log "http://script.zxbxns.me/sc/clear-log.sh"
-wget -O change-port "http://script.zxbxns.me/sc/change.sh"
-wget -O port-ovpn "http://script.zxbxns.me/sc/port-ovpn.sh"
-wget -O port-ssl "http://script.zxbxns.me/sc/port-ssl.sh"
-wget -O port-wg "http://script.zxbxns.me/sc/port-wg.sh"
-wget -O port-tr "http://script.zxbxns.me/sc/port-tr.sh"
-wget -O port-sstp "http://script.zxbxns.me/sc/port-sstp.sh"
-wget -O port-squid "http://script.zxbxns.me/sc/port-squid.sh"
-wget -O port-ws "http://script.zxbxns.me/sc/port-ws.sh"
-wget -O port-vless "http://script.zxbxns.me/sc/port-vless.sh"
-wget -O wbmn "http://script.zxbxns.me/sc/webmin.sh"
-wget -O xp "http://script.zxbxns.me/sc/xp.sh"
-wget -O profile "http://script.zxbxns.me/sc/profile.sh"
-wget -O update "http://script.zxbxns.me/sc/update.sh"
-wget -O status "http://script.zxbxns.me/sc/status.sh"
+wget -O add-host "http://script.zxbxns.my.id/sc/add-host.sh"
+wget -O about "http://script.zxbxns.my.id/sc/about.sh"
+wget -O menu "http://script.zxbxns.my.id/sc/menu.sh"
+wget -O usernew "http://script.zxbxns.my.id/sc/usernew.sh"
+wget -O trial "http://script.zxbxns.my.id/sc/trial.sh"
+wget -O hapus "http://script.zxbxns.my.id/sc/hapus.sh"
+wget -O member "http://script.zxbxns.my.id/sc/member.sh"
+wget -O delete "http://script.zxbxns.my.id/sc/delete.sh"
+wget -O cek "http://script.zxbxns.my.id/sc/cek.sh"
+wget -O restart "http://script.zxbxns.my.id/sc/restart.sh"
+wget -O speedtest "http://script.zxbxns.my.id/sc/speedtest_cli.py"
+wget -O info "http://script.zxbxns.my.id/sc/info.sh"
+wget -O ram "http://script.zxbxns.my.id/sc/ram.sh"
+wget -O renew "http://script.zxbxns.my.id/sc/renew.sh"
+wget -O autokill "http://script.zxbxns.my.id/sc/autokill.sh"
+wget -O ceklim "http://script.zxbxns.my.id/sc/ceklim.sh"
+wget -O tendang "http://script.zxbxns.my.id/sc/tendang.sh"
+wget -O clear-log "http://script.zxbxns.my.id/sc/clear-log.sh"
+wget -O change-port "http://script.zxbxns.my.id/sc/change.sh"
+wget -O port-ovpn "http://script.zxbxns.my.id/sc/port-ovpn.sh"
+wget -O port-ssl "http://script.zxbxns.my.id/sc/port-ssl.sh"
+wget -O port-wg "http://script.zxbxns.my.id/sc/port-wg.sh"
+wget -O port-tr "http://script.zxbxns.my.id/sc/port-tr.sh"
+wget -O port-sstp "http://script.zxbxns.my.id/sc/port-sstp.sh"
+wget -O port-squid "http://script.zxbxns.my.id/sc/port-squid.sh"
+wget -O port-ws "http://script.zxbxns.my.id/sc/port-ws.sh"
+wget -O port-vless "http://script.zxbxns.my.id/sc/port-vless.sh"
+wget -O wbmn "http://script.zxbxns.my.id/sc/webmin.sh"
+wget -O xp "http://script.zxbxns.my.id/sc/xp.sh"
+wget -O profile "http://script.zxbxns.my.id/sc/profile.sh"
+wget -O update "http://script.zxbxns.my.id/sc/update.sh"
+wget -O status "http://script.zxbxns.my.id/sc/status.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x usernew

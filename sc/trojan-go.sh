@@ -17,7 +17,7 @@ touch /etc/trojan-go/uuid.txt
 mkdir -p /etc/trojan-go/
 chmod 777 /etc/trojan-go/
 touch /etc/trojan-go/trojan-go.pid
-wget -O /etc/trojan-go/trojan-go http://script.zxbxns.me/sc/trojan-go
+wget -O /etc/trojan-go/trojan-go http://script.zxbxns.my.id/sc/trojan-go
 chmod +x /etc/trojan-go/trojan-go
 cat <<EOF > /etc/trojan-go/config.json
 {
@@ -101,9 +101,9 @@ systemctl start trojan-go
 
 # Download Script
 cd /usr/bin 
-wget -O add-trgo "script.zxbxns.me/sc/add-trgo.sh" 
-wget -O del-trgo "script.zxbxns.me/sc/del-trgo.sh" 
-wget -O renew-trgo "script.zxbxns.me/sc/renew-trgo.sh" 
+wget -O add-trgo "script.zxbxns.my.id/sc/add-trgo.sh" 
+wget -O del-trgo "script.zxbxns.my.id/sc/del-trgo.sh" 
+wget -O renew-trgo "script.zxbxns.my.id/sc/renew-trgo.sh" 
 chmod +x add-trgo 
 chmod +x del-trgo 
 chmod +x renew-trgo

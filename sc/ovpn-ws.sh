@@ -3,14 +3,14 @@
 # ==============================
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ovpn-ws http://script.zxbxns.me/sc/ovpn-ws.py
+wget -q -O /usr/local/bin/ovpn-ws http://script.zxbxns.my.id/sc/ovpn-ws.py
 chmod +x /usr/local/bin/ovpn-ws
 
 # Installing Service
 cat > /etc/systemd/system/ovpn-ws.service << END
 [Unit]
 Description=Python Ovpn Ws By Mail
-Documentation=https://mailstores.me
+Documentation=https://t.me/zxbxns
 After=network.target nss-lookup.target
 
 [Service]

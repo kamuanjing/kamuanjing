@@ -11,7 +11,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
-IZIN=$( curl http://sc.zxbxns.me:81/akses/token | grep $MYIP )
+IZIN=$( curl http://sc.zxbxns.my.id:81/akses/token | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -27,22 +27,22 @@ exit 0
 fi
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-wget http://script.zxbxns.me/sc/cf.sh && chmod +x cf.sh && ./cf.sh
+wget http://script.zxbxns.my.id/sc/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget http://script.zxbxns.me/sc/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget http://script.zxbxns.me/sc/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget http://script.zxbxns.my.id/sc/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget http://script.zxbxns.my.id/sc/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget http://script.zxbxns.me/sc/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget http://script.zxbxns.me/sc/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget http://script.zxbxns.my.id/sc/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget http://script.zxbxns.my.id/sc/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget http://script.zxbxns.me/sc/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget http://script.zxbxns.my.id/sc/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget http://script.zxbxns.me/sc/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget http://script.zxbxns.my.id/sc/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #Trojan-Go
-wget https://script.zxbxns.me/sc/trojan-go.sh && chmod +x trojan-go.sh && screen -S trojan-go ./trojan-go.sh 
+wget https://script.zxbxns.my.id/sc/trojan-go.sh && chmod +x trojan-go.sh && screen -S trojan-go ./trojan-go.sh 
 #install L2TP
-wget http://script.zxbxns.me/sc/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget http://script.zxbxns.me/sc/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget http://script.zxbxns.my.id/sc/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget http://script.zxbxns.my.id/sc/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -55,7 +55,7 @@ rm -f /root/set-br.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
-Documentation=https://zxbxns.me
+Documentation=https://t.me/zxbxns
 
 [Service]
 Type=oneshot
@@ -67,7 +67,7 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
-wget -O /etc/set.sh "http://script.zxbxns.me/sc/set.sh"
+wget -O /etc/set.sh "http://script.zxbxns.my.id/sc/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver

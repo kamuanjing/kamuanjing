@@ -8,7 +8,7 @@ b="\e[0;34m"
 v="$(cat /home/ver)"
 MYIP=$(wget -qO- ifconfig.me/ip); 
 echo "Checking VPS" 
-IZIN=$( curl http://sc.zxbxns.me:81/akses/token | grep $MYIP ) 
+IZIN=$( curl http://sc.zxbxns.my.id:81/akses/token | grep $MYIP ) 
 if 
 [ $MYIP = $IZIN ]; then 
 echo -e "${h}Permission Accepted...${n}" 

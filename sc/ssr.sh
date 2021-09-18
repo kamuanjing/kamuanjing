@@ -122,7 +122,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "http://script.zxbxns.me/sc/ssrmu"
+	wget -O /etc/init.d/ssrmu "http://script.zxbxns.my.id/sc/ssrmu"
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
@@ -138,9 +138,9 @@ Save_iptables
 Start_SSR
 }
 Install_SSR
-wget -O /usr/bin/ssr http://script.zxbxns.me/sc/ssrmu.sh && chmod +x /usr/bin/ssr
-wget -O /usr/bin/add-ssr http://script.zxbxns.me/sc/add-ssr.sh && chmod +x /usr/bin/add-ssr
-wget -O /usr/bin/del-ssr http://script.zxbxns.me/sc/del-ssr.sh && chmod +x /usr/bin/del-ssr
-wget -O /usr/bin/renew-ssr http://script.zxbxns.me/sc/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
+wget -O /usr/bin/ssr http://script.zxbxns.my.id/sc/ssrmu.sh && chmod +x /usr/bin/ssr
+wget -O /usr/bin/add-ssr http://script.zxbxns.my.id/sc/add-ssr.sh && chmod +x /usr/bin/add-ssr
+wget -O /usr/bin/del-ssr http://script.zxbxns.my.id/sc/del-ssr.sh && chmod +x /usr/bin/del-ssr
+wget -O /usr/bin/renew-ssr http://script.zxbxns.my.id/sc/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh

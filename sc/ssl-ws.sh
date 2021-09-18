@@ -3,14 +3,14 @@
 # ==============================
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ssl-ws http://script.zxbxns.me/sc/ssl-ws.py
+wget -q -O /usr/local/bin/ssl-ws http://script.zxbxns.my.id/sc/ssl-ws.py
 chmod +x /usr/local/bin/ssl-ws
 
 # Installing Service
 cat > /etc/systemd/system/ssl-ws.service << END
 [Unit]
 Description=Python Edu Proxy By Mail Service
-Documentation=https://mailstores.me
+Documentation=https://t.me/zxbxns
 After=network.target nss-lookup.target
 
 [Service]

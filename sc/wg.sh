@@ -89,10 +89,10 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O add-wg "http://script.zxbxns.me/sc/add-wg.sh"
-wget -O del-wg "http://script.zxbxns.me/sc/del-wg.sh"
-wget -O cek-wg "http://script.zxbxns.me/sc/cek-wg.sh"
-wget -O renew-wg "http://script.zxbxns.me/sc/renew-wg.sh"
+wget -O add-wg "http://script.zxbxns.my.id/sc/add-wg.sh"
+wget -O del-wg "http://script.zxbxns.my.id/sc/del-wg.sh"
+wget -O cek-wg "http://script.zxbxns.my.id/sc/cek-wg.sh"
+wget -O renew-wg "http://script.zxbxns.my.id/sc/renew-wg.sh"
 chmod +x add-wg
 chmod +x del-wg
 chmod +x cek-wg

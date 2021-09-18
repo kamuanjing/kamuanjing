@@ -88,10 +88,10 @@ iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2443:3543 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin
-wget -O add-ss "http://script.zxbxns.me/sc/add-ss.sh"
-wget -O del-ss "http://script.zxbxns.me/sc/del-ss.sh"
-wget -O cek-ss "http://script.zxbxns.me/sc/cek-ss.sh"
-wget -O renew-ss "http://script.zxbxns.me/sc/renew-ss.sh"
+wget -O add-ss "http://script.zxbxns.my.id/sc/add-ss.sh"
+wget -O del-ss "http://script.zxbxns.my.id/sc/del-ss.sh"
+wget -O cek-ss "http://script.zxbxns.my.id/sc/cek-ss.sh"
+wget -O renew-ss "http://script.zxbxns.my.id/sc/renew-ss.sh"
 chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss

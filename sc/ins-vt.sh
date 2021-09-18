@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget http://script.zxbxns.me/sc/go.sh && chmod +x go.sh && ./go.sh
+wget http://script.zxbxns.my.id/sc/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -491,19 +491,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-ws "http://script.zxbxns.me/sc/add-ws.sh"
-wget -O add-vless "http://script.zxbxns.me/sc/add-vless.sh"
-wget -O add-tr "http://script.zxbxns.me/sc/add-tr.sh"
-wget -O del-ws "http://script.zxbxns.me/sc/del-ws.sh"
-wget -O del-vless "http://script.zxbxns.me/sc/del-vless.sh"
-wget -O del-tr "http://script.zxbxns.me/sc/del-tr.sh"
-wget -O cek-ws "http://script.zxbxns.me/sc/cek-ws.sh"
-wget -O cek-vless "http://script.zxbxns.me/sc/cek-vless.sh"
-wget -O cek-tr "http://script.zxbxns.me/sc/cek-tr.sh"
-wget -O renew-ws "http://script.zxbxns.me/sc/renew-ws.sh"
-wget -O renew-vless "http://script.zxbxns.me/sc/renew-vless.sh"
-wget -O renew-tr "http://script.zxbxns.me/sc/renew-tr.sh"
-wget -O certv2ray "http://script.zxbxns.me/sc/cert.sh"
+wget -O add-ws "http://script.zxbxns.my.id/sc/add-ws.sh"
+wget -O add-vless "http://script.zxbxns.my.id/sc/add-vless.sh"
+wget -O add-tr "http://script.zxbxns.my.id/sc/add-tr.sh"
+wget -O del-ws "http://script.zxbxns.my.id/sc/del-ws.sh"
+wget -O del-vless "http://script.zxbxns.my.id/sc/del-vless.sh"
+wget -O del-tr "http://script.zxbxns.my.id/sc/del-tr.sh"
+wget -O cek-ws "http://script.zxbxns.my.id/sc/cek-ws.sh"
+wget -O cek-vless "http://script.zxbxns.my.id/sc/cek-vless.sh"
+wget -O cek-tr "http://script.zxbxns.my.id/sc/cek-tr.sh"
+wget -O renew-ws "http://script.zxbxns.my.id/sc/renew-ws.sh"
+wget -O renew-vless "http://script.zxbxns.my.id/sc/renew-vless.sh"
+wget -O renew-tr "http://script.zxbxns.my.id/sc/renew-tr.sh"
+wget -O certv2ray "http://script.zxbxns.my.id/sc/cert.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr

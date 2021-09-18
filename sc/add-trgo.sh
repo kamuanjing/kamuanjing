@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl http://sc.zxbxns.me:81/akses/token | grep $MYIP )
+IZIN=$( curl http://sc.zxbxns.my.id:81/akses/token | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted${NC}"
 else
