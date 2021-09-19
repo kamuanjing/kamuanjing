@@ -45,12 +45,12 @@ echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-pptp"
 cat <<EOF
 Successfully Creating Premium Account
 PPTP VPN Account Information
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 ISP          : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 City         : $(curl -s ipinfo.io/city )
 Server IP    : $domain
 Username     : $VPN_USER
 Password     : $VPN_PASSWORD
 Expired On   : $exp
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 EOF

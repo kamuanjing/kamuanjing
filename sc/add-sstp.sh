@@ -41,7 +41,7 @@ clear
 cat <<EOF
 Successfully Creating Premium Account
 SSTP VPN Account Information
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 ISP           : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 City          : $(curl -s ipinfo.io/city )
 Server IP     : $domain
@@ -50,5 +50,5 @@ Password      : $pass
 Port          : $sstp
 Cert          : http://$domain:81/server.crt
 Expired On    : $exp
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 EOF

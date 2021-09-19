@@ -50,7 +50,7 @@ echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-l2tp"
 cat <<EOF
 Successfully Creating Premium Account
 L2TP/IPSEC PSK VPN Account Information
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 ISP          : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 City         : $(curl -s ipinfo.io/city )
 Server IP    : $domain
@@ -58,5 +58,5 @@ IPsec PSK    : myvpn
 Username     : $VPN_USER
 Password     : $VPN_PASSWORD
 Expired ON   : $exp
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 EOF
