@@ -25,7 +25,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/shadowsocksr/akun.conf")
 	echo ""
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 	grep -E "^### " "/usr/local/shadowsocksr/akun.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -49,7 +49,7 @@ sed -i "s/### $user $exp/### $user $exp4/g" /usr/local/shadowsocksr/akun.conf
 clear
 echo ""
 echo " Shadowsocks-R Account Has Been Successfully Renewed"
-echo " =========================="
+echo " ━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " =========================="
+echo " ━━━━━━━━━━━━━━━━━━━━━━━━━━"

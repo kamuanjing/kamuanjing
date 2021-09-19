@@ -26,7 +26,7 @@ source /etc/wireguard/params
 	echo ""
 	echo "Select an existing client that you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 	echo "     No  Expired   User"
 	grep -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf" | cut -d ' ' -f 3-4 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -49,7 +49,7 @@ sed -i "s/### Client $user $exp/### Client $user $exp4/g" /etc/wireguard/wg0.con
 clear
 echo ""
 echo " Wireguard Account Has Been Successfully Renewed"
-echo " =========================="
+echo " ━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo " Client Name : $user"
 echo " Expired  On: $exp4"
-echo " =========================="
+echo " ━━━━━━━━━━━━━━━━━━━━━━━━━━"
