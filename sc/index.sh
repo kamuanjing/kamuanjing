@@ -1,5 +1,5 @@
 #!/bin/bash
-ip=$(cat /etc/v2ray/domain)
+ip=$(wget -qO- ifconfig.me/ip);
 cat> /home/vps/public_html/index.html << END
 <!DOCTYPE html>
 <html lang="en">
