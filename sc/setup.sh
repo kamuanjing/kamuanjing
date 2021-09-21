@@ -101,7 +101,7 @@ echo "   - V2RAY Vless None TLS    : 8880"  | tee -a log-install.txt
 echo "   - Trojan                  : 2087"  | tee -a log-install.txt
 echo "   - TrojanGo                : 2096"  | tee -a log-install.txt
 echo "   - SSH-WS                  : 2082"  | tee -a log-install.txt
-echo"    - SSL-WS                  : 443"  | tee -a log-install.txt
+echo"    - SSL-WS                  : 443, 2053"  | tee -a log-install.txt
 echo "   - OpenVPN-WS              : 2052"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt

@@ -33,7 +33,10 @@ wget http://script.zxbxns.my.id/sc/ssh-ws.sh && chmod +x ssh-ws.sh && ./ssh-ws.s
 # install ovpn-ws
 wget http://script.zxbxns.my.id/sc/ovpn-ws.sh && chmod +x ovpn-ws.sh && ./ovpn-ws.sh
 
-# install ssl-ws & sslh
+# install ssl-ws 
+wget http://script.zxbxns.my.id/sc/ssl-ws.sh && chmod +x ssl-ws.sh && ./ssl-ws.sh
+
+# install sslh 443
 apt-get install sslh -y 
 wget -O /etc/default/sslh "script.zxbxns.my.id/sc/sslh.conf"
 service sslh restart
@@ -104,7 +107,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "http://script.zxbxns.my.id/sc/nginx.conf"
 mkdir -p /home/vps/public_html
-wget script.zxbxns.my.id/sc/index.sh && chmod +x index.sh && ./index.sh
+wget -O /home/vps/public_html/index.html "hhtp://script.zxbxns.my.id/sc/index.conf"
 wget -O /etc/nginx/conf.d/vps.conf "http://script.zxbxns.my.id/sc/vps.conf"
 /etc/init.d/nginx restart
 
@@ -320,8 +323,8 @@ chmod +x update
 chmod +x status
 
 # seting crontab
-echo "0 0 * * * root /usr/bin/xp && delete && clear-log" >> /etc/crontab
-echo "0 5 * * * root reboot" >> /etc/crontab
+echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
+echo "0 0 * * * root xp && delete" >> /etc/crontab
 
 # remove unnecessary files
 cd

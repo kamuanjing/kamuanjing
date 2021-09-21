@@ -64,7 +64,7 @@ echo -e " Ovpn Websocket     : Ovpn Websocket Service Is "$green"Running"$NC""
 else 
 echo -e " Ovpn Websocket     : Ovpn Websocket Service Is "$red"Not Running (Error)"$NC""
 fi
-status="$(systemctl show sslh.service --no-page)"
+status="$(systemctl show ssl-ws.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
