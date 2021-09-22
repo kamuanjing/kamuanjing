@@ -107,7 +107,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "http://script.zxbxns.my.id/sc/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /home/vps/public_html/index.html "hhtp://script.zxbxns.my.id/sc/index.conf"
+wget -O /home/vps/public_html/index.html "script.zxbxns.my.id/sc/index.conf"
 wget -O /etc/nginx/conf.d/vps.conf "http://script.zxbxns.my.id/sc/vps.conf"
 /etc/init.d/nginx restart
 

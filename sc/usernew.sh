@@ -27,7 +27,7 @@ ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)" 
 sshws="$(cat ~/log-install.txt | grep -w "SSH-WS" | cut -d: -f2)" 
 sslws="$(cat ~/log-install.txt | grep -w "SSL-WS" | cut -d: -f2)"
-ovpnws="$(cat ~/log-install.txt | grep -w "OVPN-WS" | cut -d: -f2)"
+ovpnws="$(cat ~/log-install.txt | grep -w "OpenVPN-WS" | cut -d: -f2)"
 sleep 1
 echo Ping Host
 echo Cek Hak Akses...
@@ -62,7 +62,7 @@ echo -e "OVPN-WS        :$ovpnws"
 echo -e "Port Squid     :$sqd"
 echo -e "━━━━━━━━━━━━━━━━━━━━"
 echo -e "OpenVPN TCP    : http://$domain:81/client-tcp-1194.ovpn"
-echo -e "OpenVPN UDP    : http://$domaun:81/client-udp-2200.ovpn"
+echo -e "OpenVPN UDP    : http://$domain:81/client-udp-2200.ovpn"
 echo -e "OpenVPN SSL    : http://$domain:81/client-tcp-ssl.ovpn"
 echo -e "Badvpn         : 7100-7300"
 echo -e "━━━━━━━━━━━━━━━━━━━━"
