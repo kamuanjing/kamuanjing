@@ -185,7 +185,7 @@ accept = 442
 connect = 127.0.0.1:1194
 
 [websocket]
-accept = 775
+accept = 2053
 connect = 127.0.0.1:443
 
 END
