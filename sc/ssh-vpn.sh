@@ -325,7 +325,7 @@ chmod +x status
 # seting crontab
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp && delete" >> /etc/crontab
-echo "*/59 * * * * root systemctl restart trojan-go" >> /etc/crontab
+echo "* */6 * * * root systemctl restart trojan-go" >> /etc/crontab
 
 # remove unnecessary files
 cd
