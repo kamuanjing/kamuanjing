@@ -27,8 +27,10 @@ exit 0
 fi
 clear
 echo "Starting Update Please Wait..."
+sleep 5
 clear
 echo "Download And Install Patch..."
+sleep 5
 cd /usr/bin
 wget -O usernew "script.zxbxns.my.id/sc/usernew.sh"
 wget -O trial "script.zxbxns.my.id/sc/trial.sh"
@@ -40,6 +42,7 @@ chmod +x menu
 chmod +x profile
 clear 
 echo "Successfuly Download And Install Patch..."
+sleep 3
 cd
 echo "1.2" > /home/ver
 clear
