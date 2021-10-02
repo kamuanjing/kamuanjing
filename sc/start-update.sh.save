@@ -11,7 +11,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
-IZIN=$( curl http://sc.zxbxns.me:81/akses/token | grep $MYIP )
+IZIN=$( curl http://sc.zxbxns.my.id:81/akses/token | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -25,21 +25,16 @@ if [[ $versi == 1.2 ]]; then
 echo "You Have The Latest Version"
 exit 0
 fi
-clear
-echo "Starting Update Please Wait..."
-clear
-echo "Download And Install Patch..."
+echo "Starting Update Please Wait.."
 cd /usr/bin
-wget -O usernew "script.zxbxns.my.id/sc/usernew.sh"
-wget -O trial "script.zxbxns.my.id/sc/trial.sh"
-wget -O menu "script.zxbxns.my.id/sc/menu.sh"
-wget -O profile "script.zxbxns.my.id/sc/profile.sh"
+wget -O usernew "http://sc.zxbxns.me:81/sc/usernew.sh"
+wget -O trial "http://sc.zxbxns.me:81/sc/trial.sh"
+wget -O menu "http://sc.zxbxns.me:81/sc/menu.sh"
+wget -O profile "http://sc.zxbxns.me:81/sc/profile.sh"
 chmod +x usernew
 chmod +x trial
 chmod +x menu
 chmod +x profile
-clear 
-echo "Successfuly Download And Install Patch..."
 cd
 echo "1.2" > /home/ver
 clear
