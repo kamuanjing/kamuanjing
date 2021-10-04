@@ -5,8 +5,7 @@ NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip); 
 echo "Checking VPS" 
 IZIN=$( curl http://sc.zxbxns.my.id:81/akses/token | grep $MYIP ) 
-if [ $MYIP = $IZIN ]; 
-then 
+if [ $MYIP = $IZIN ]; then 
 echo -e "${green}Permission Accepted...${NC}" 
 else 
 echo -e "${red}Permission Denied!${NC}"; 
