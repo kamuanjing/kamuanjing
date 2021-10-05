@@ -13,6 +13,8 @@ read -p "Masukan Email Akun Github Nya: " email
 git config --global user.email "$email"
 read -p "Masukan Username Github Nya: " user
 git config --global user.name "$user"
+read -p "Masukan Link Relository: " repo
+echo "$repo" >> /home/repo
 ;;
 2)
 git init 
@@ -22,7 +24,7 @@ read -p "Masukan Nama Branch: " branch
 git commit -m "$branch"
 sleep 5
 clear
-read -p "Masukan Link Github Mu: " link
+link=$(cat /home/repo)
 git remote add origin $link
 git push -u origin $branch
 ;;
