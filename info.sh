@@ -17,7 +17,7 @@ else
 domain=$IP     
 fi
 clear
-echo -e "      Welcome To Server VPS $m$hostname$n"
+echo -e "  Welcome To Server VPS $m$hostname$n"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e " $w          ⇱ VPS INFORMASION ⇲           $n"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
