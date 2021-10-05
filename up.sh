@@ -4,7 +4,7 @@ echo -e "-----------------------------------"
 echo -e " SCRIPT AUTO UPLOAD FILE TO GITHUB "
 echo -e "       Telegram t.me/zxbxns        "
 echo -e "-----------------------------------"
-echo -e "[1] setup global user.name dan email"
+echo -e "[1] Setup Config"
 echo -e "[2] upload"
 read -p "Masukan Nomor: " gass
 case $gass in
