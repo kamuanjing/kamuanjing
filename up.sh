@@ -13,11 +13,8 @@ read -p "Masukan Email Github: " email
 git config --global user.email "$email"
 read -p "Masukan Username Github: " user
 git config --global user.name "$user"
-echo "$user" >> /home/usergit
 read -p "Masukan Link Repository: " repo
 echo "$repo" >> /home/repo
-read -p "Masukan Token Github: " token
-echo "$token" >> /home/tokengit
 ;;
 2)
 git init 
@@ -30,6 +27,6 @@ clear
 link=$(cat /home/repo)
 clear
 git remote add origin $link
-git push https://kamuanjing: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@kamuanjing.biz $branch
+git push -u origin $branch
 ;;
 esac
