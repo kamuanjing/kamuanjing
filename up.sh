@@ -31,8 +31,6 @@ link=$(cat /home/repo)
 user=$(cat/home/usergit)
 token=$(cat /home/tokengit)
 git remote add origin $link
-git push -u origin $branch
-$user
-$token
+git push -u origin $branch "$user\n$token\n"
 ;;
 esac
