@@ -22,7 +22,7 @@ read -p "Masukan Nama File: " file
 git add $file
 read -p "Masukan Nama Branch: " branch
 git commit -m "$branch"
-sleep 5
+sleep 3
 clear
 link=$(cat /home/repo)
 git remote add origin $link
