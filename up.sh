@@ -9,12 +9,15 @@ echo -e "[2] upload"
 read -p "Masukan Nomor: " gass
 case $gass in
 1)
-read -p "Masukan Email Akun Github Nya: " email
+read -p "Masukan Email Github: " email
 git config --global user.email "$email"
-read -p "Masukan Username Github Nya: " user
+read -p "Masukan Username Github: " user
 git config --global user.name "$user"
-read -p "Masukan Link Relository: " repo
+echo "$user" >> /home/usergit
+read -p "Masukan Link Repository: " repo
 echo "$repo" >> /home/repo
+read -p "Masukan Token Github: " token
+echo "$token" >> /home/tokengit
 ;;
 2)
 git init 
@@ -25,7 +28,11 @@ git commit -m "$branch"
 sleep 3
 clear
 link=$(cat /home/repo)
+user=$(cat/home/usergit)
+token=$(cat /home/tokengit)
 git remote add origin $link
 git push -u origin $branch
+$user
+$token
 ;;
 esac
