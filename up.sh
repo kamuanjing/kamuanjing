@@ -30,6 +30,6 @@ clear
 link=$(cat /home/repo)
 clear
 git remote add origin $link
-git push https://kamuanjing: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@kamuanjing.git $branch
+git push https://kamuanjing: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@kamuanjing $branch
 ;;
 esac
