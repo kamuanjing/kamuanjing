@@ -28,8 +28,9 @@ git commit -m "$branch"
 sleep 3
 clear
 link=$(cat /home/repo)
-user=$(cat/home/usergit)
+user=$(cat /home/usergit)
 token=$(cat /home/tokengit)
+clear
 git remote add origin $link
 git push -u origin $branch "$user\n$token\n"
 ;;
