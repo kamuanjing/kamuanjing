@@ -9,6 +9,5 @@ chmod +x xp-ip
 
 cd /home/vps/public_html
 mkdir akses
-echo "#list Ip Vps" >> /home/vps/public_html/akses/token
-
+# hapus script
 rm -f ipregis.sh
