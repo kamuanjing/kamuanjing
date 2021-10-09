@@ -15,8 +15,8 @@ echo -e "### | $user | $ip | $exp" >> /home/listip.txt
 clear
 echo "Done"
 echo "Your IP Has Been Registered"
-echo -e "==============================="
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "IP         : $ip"
 echo -e "Name       : $user"
 echo -e "Expired ON : $exp"
-echo -e "==============================="
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
