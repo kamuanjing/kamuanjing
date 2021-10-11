@@ -11,9 +11,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/home/listip.txt")
 	echo ""
 	echo -e "  Select the existing client you want to remove"
 	echo -e "  Press CTRL+C to return"
-	echo -e "  ====================================="
+	echo -e "  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 	echo -e "     No |  User  |      Ip     |  Exp"
-        echo -e "  ====================================="
+        echo -e "  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
         grep -E "^### " "/home/listip.txt" | cut -d ' ' -f 2-7 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -29,8 +29,8 @@ sed -i "/^### | $user | $ip | $exp/d" /home/listip.txt
 sed -i "/^$ip/d" /home/vps/public_html/akses/token
 clear
 echo " Your IP Has Been Deleted"
-echo " =========================="
+echo " ━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo " Ip         : $ip"
 echo " Name       : $user"
 echo " Expired On : $exp"
-echo " =========================="
+echo " ━━━━━━━━━━━━━━━━━━━━━━━━━━"
