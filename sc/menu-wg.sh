@@ -28,7 +28,7 @@ echo -e "    [xx] Back To Menu $red[menu]$NC"
 echo -e ""
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e ""
-read -p "    [••] Please Input Number  [1-5 or x] : "  wgr
+read -p "    [••] Please Input Number  [1-5 or xx] : "  wgr
 echo -e ""
 case $wgr in
 1)
