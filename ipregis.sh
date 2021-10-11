@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 cd /usr/bin
 wget -O add-ip "script.zxbxns.me/sc/add-ip.sh"
 wget -O del-ip "script.zxbxns.me/sc/del-ip.sh"
