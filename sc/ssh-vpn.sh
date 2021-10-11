@@ -283,6 +283,12 @@ wget -O xp "http://script.zxbxns.my.id/sc/xp.sh"
 wget -O profile "http://script.zxbxns.my.id/sc/profile.sh"
 wget -O update "http://script.zxbxns.my.id/sc/update.sh"
 wget -O status "http://script.zxbxns.my.id/sc/status.sh"
+wget -O menu-ssh "script.zxbxns.my.id/sc/menu-ssh.sh"
+wget -O menu-wg "script.zxbxns.my.id/sc/menu-wg.sh"
+wget -O menu-vpn "script.zxbxns.my.id/sc/menu-vpn.sh"
+wget -O menu-ss-ssr "script.zxbxns.my.id/sc/menu-ss-ssr.sh"
+wget -O menu-v2ray "script.zxbxns.my.id/sc/menu-v2ray.sh"
+wget -O menu-tr "script.zxbxns.my.id/sc/menu-tr.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x usernew
@@ -315,6 +321,12 @@ chmod +x xp
 chmod +x profile
 chmod +x update
 chmod +x status
+chmod +x menu-ssh
+chmod +x menu-wg
+chmod +x menu-vpn
+chmod +x menu-ss-ssr
+chmod +x menu-v2ray
+chmod +x menu-tr
 
 # seting crontab
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
