@@ -31,7 +31,7 @@ echo -e "    [xx] Back To Menu $red[menu]$NC"
 echo -e ""
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e ""
-read -p "    [••] Please Input Number  [1-8 or xx] : " trojan
+read -p "    [••] Please Input Number  [1-7 or xx] : " trojan
 echo -e ""
 case $trojan in
 1)
