@@ -32,6 +32,7 @@ cp -r /var/lib/premium-script/ backup/premium-script
 cp -r /home/sstp backup/sstp
 cp -r /etc/v2ray backup/v2ray
 cp -r /etc/trojan backup/trojan
+cp -r /etc/trojan-go backup/trojan-go
 cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
 cp /etc/crontab backup/crontab
 cp -r /home/vps/public_html backup/public_html

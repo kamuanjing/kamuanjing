@@ -35,7 +35,7 @@ sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan/config.json
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e "### $user $exp" >> /etc/trojan/akun.conf
 systemctl restart trojan
-trojanlink="trojan://${uuid}@${domain}:${tr}"
+trojanlink="trojan://${user}@${domain}:${tr}"
 clear
 echo -e "Successfully Creating Premium Account"
 echo -e "Trojan Account Information"
