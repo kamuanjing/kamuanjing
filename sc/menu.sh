@@ -7,7 +7,7 @@ MYIP=$(wget -qO- ifconfig.me/ip);
 
 # vps info
 isp=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 ) 
-lokasi=$(curl -s ifconfig.co/country ) 
+lokasi=$(curl -s ipinfo.io/country ) 
 uptime=$(uptime -p) 
 versi=$(cat /home/ver)
 source /var/lib/premium-script/ipvps.conf 
