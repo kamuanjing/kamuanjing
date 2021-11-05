@@ -19,8 +19,4 @@ echo -e "${red}Permission Denied!${NC}";
 echo "Only For Premium Users"
 exit 0
 fi
-<<<<<<< HEAD
-wget http://sc.zxbxns.my.id:81/sc/start-update.sh && chmod +x start-update.sh && ./start-update.sh 
-=======
 wget http://sc.zxbxns.my.id:81/sc/start-update.sh && chmod +x start-update.sh && ./start-update.sh && rm start-update.sh
->>>>>>> 44a8eb3cdcce3dbc2fb5090db585884809490394
