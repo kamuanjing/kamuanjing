@@ -39,7 +39,7 @@ sed -i '/#tls$/a\### '"$user $exp"'\
 sed -i '/#none$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vnone.json
 read -p "SNI/Bug Host: " bug
-vlesslink1="vless://${uuid}@${bug}:$tls?path=/MailStores&security=tls&encryption=none&type=ws&host=${domain}#${user}"
+vlesslink1="vless://${uuid}@${domain}:$tls?path=/MailStores&security=tls&encryption=none&type=ws&host=${bug}#${user}"
 vlesslink2="vless://${uuid}@${bug}:$none?path=/MailStores&encryption=none&type=ws&host=${domain}#${user}"
 systemctl restart v2ray@vless
 systemctl restart v2ray@vnone

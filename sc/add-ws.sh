@@ -43,14 +43,14 @@ cat>/etc/v2ray/$user-tls.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "${bug}",
+      "add": "${domain}",
       "port": "${tls}",
       "id": "${uuid}",
       "aid": "2",
       "net": "ws",
       "path": "/MailStores",
       "type": "none",
-      "host": "${domain}",
+      "host": "${bug}",
       "tls": "tls"
 }
 EOF
